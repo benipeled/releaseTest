@@ -21,6 +21,6 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
       - name: Print from other step
-        run: ${{ steps.get_version.outputs.VERSION }}
+        run: echo ${{ steps.get_version.outputs.VERSION }}
 
 
